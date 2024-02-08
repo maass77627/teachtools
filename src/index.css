@@ -11,3 +11,29 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+#title {
+  font-style: Helvetica;
+  text-align: center;
+}
+
+#teach-header {
+  background-color: darkslategrey;
+  height: 100px;
+  
+}
+
+#student-container {
+  background-color: rgb(189, 137, 184);
+  height: 300px;
+  width: 600px;
+
+}
+
+#parent-container {
+  float: right;
+  background-color: rgb(187, 208, 118);
+  height: 600px;
+  width: 300px;
+
+}
