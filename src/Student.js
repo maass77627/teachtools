@@ -1,10 +1,10 @@
 
-function Student() {
+function Student({student}) {
 
 
     return(
         <div id="student">
-            <h1>Student Component</h1>
+            <h1>{student.firstName}</h1>
         </div>
     )
 }
