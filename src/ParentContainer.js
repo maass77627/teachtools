@@ -1,11 +1,13 @@
+import Parent from "./Parent"
 
 
-function ParentContainer() {
+function ParentContainer({parents}) {
 
 
     return(
-        <div id="parent-container">
-            <h1>ParentContainer Component</h1>
+        <div className="item4">
+            <h2>Parents</h2>
+            {parents.map((parent) => <Parent key={parent.id} parent={parent}></Parent>)}
         </div>
     )
 }

@@ -5,8 +5,8 @@ function StudentContainer({students}) {
 
     
     return(
-        <div id="student-container">
-            <h1>StudentContainer Component</h1>
+        <div className="item2">
+            <h2>Students</h2>
             {students.map((student) => <Student key={student.id} student={student}></Student>)}
         </div>
     )

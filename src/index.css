@@ -17,6 +17,11 @@ code {
   text-align: center;
 }
 
+#image {
+  float: right;
+  
+}
+
 #teach-header {
   background-color: darkslategrey;
   height: 100px;
@@ -26,14 +31,65 @@ code {
 #student-container {
   background-color: rgb(189, 137, 184);
   height: 300px;
-  width: 600px;
+  width: 700px;
 
 }
 
-#parent-container {
-  float: right;
-  background-color: rgb(187, 208, 118);
-  height: 600px;
-  width: 300px;
 
+
+.grid-container {
+  display: grid;
+  grid:
+  'header header header header header header'
+  'menu main main main right right'
+  'menu footer footer footer footer footer'; 
+  grid-gap: 5px;
+  text-align: center;
+  font-size: 20;
+}
+
+.item1 { 
+  grid-area: header;
+  background-color: darkslategrey; 
+  height: 100px;
+  width: 1300px;
+  border-radius: 25px;
+  
+}
+.item2 { 
+  grid-area: menu; 
+  background-color: rgb(189, 137, 184);
+  height: 400px;
+  width: 700px;
+  border-radius: 25px;
+}
+.item3 { grid-area: main; }
+.item4 { 
+  grid-area: right;
+  background-color: rgb(187, 208, 118); 
+  height: 700px;
+  width: 200px;
+  border-radius: 25px;
+}
+.item5 { grid-area: footer; }
+
+#parent {
+  height: 50px;
+  width: 50px;
+  border: 2px;
+  border-radius: 25px;
+}
+
+
+#student-image {
+  height: 50px;
+  width: 50px;
+
+}
+
+#form {
+  height: 200px;
+  width: 200px;
+  border-radius: 25px;
+  background-color: greenyellow;
 }

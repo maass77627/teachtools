@@ -1,11 +1,17 @@
 
-function Header() {
+function Header({showForm, setShowForm}) {
+
+    function handleClick() {
+        setShowForm(!showForm)
+    }
 
 
     return (
-        <div id="teach-header">
+        <div className="item1">
             <h1 id="title">Teach Tools</h1>
-        <img src="./public/ruler.png" alt="ruler.png"></img>
+            <button onClick={handleClick}>form</button>
+        <img id="image" src="ruler2.png" alt="ruler.png"></img>
+        
         </div>
 
     )

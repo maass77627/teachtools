@@ -1,11 +1,11 @@
 
 
-function Parent() {
+function Parent({parent}) {
 
 
     return(
         <div id="parent">
-            <h1>Parent Component</h1>
+            <h3>{parent.name}   {parent.phone}</h3>
         </div>
     )
 }
