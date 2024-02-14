@@ -6,6 +6,7 @@ import ParentContainer from "./ParentContainer"
 import { useState } from "react";
 import { useEffect } from "react";
 import StudentForm from "./StudentForm";
+import ParentForm from "./ParentForm";
 
 function App() {
   const [showForm, setShowForm] = useState(true)
@@ -34,6 +35,7 @@ function App() {
       <Header showForm={showForm} setShowForm={setShowForm}></Header>
       <StudentContainer students={students}></StudentContainer> 
       {showForm ? <StudentForm></StudentForm> : null}
+      {showForm ? <ParentForm></ParentForm> : null}
       <ParentContainer parents={parents}></ParentContainer>
     </div>
   );
