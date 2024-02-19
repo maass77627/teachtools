@@ -7,7 +7,9 @@ import { useState } from "react";
 import { useEffect } from "react";
 import StudentForm from "./StudentForm";
 import ParentForm from "./ParentForm";
-
+//import { Route } from "react-router-dom";
+//import Navbar from "./Navbar";
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
 function App() {
   const [showForm, setShowForm] = useState(true)
   const [students, setStudents] = useState([])
@@ -32,12 +34,28 @@ function App() {
 
   return (
     <div className="grid-container"  >
+     
+       
+        <BrowserRouter>
+        <Routes>
+          
+          <Route path="/" element={<StudentContainer students={students}/>}></Route>
+          <Route path="/parents" element={<ParentContainer parents={parents}></ParentContainer>}></Route>
+        </Routes>
+        </BrowserRouter>
+         
+        
+        
+
       <Header showForm={showForm} setShowForm={setShowForm}></Header>
-      <StudentContainer students={students}></StudentContainer> 
+      
       {showForm ? <StudentForm></StudentForm> : null}
       {showForm ? <ParentForm></ParentForm> : null}
-      <ParentContainer parents={parents}></ParentContainer>
+
+      
+      
     </div>
+
   );
 }
 

@@ -1,9 +1,9 @@
-//import { useState } from "react"
+import { useState } from "react"
 
 
-function Student({student, students}) {
+function Student({student}) {
 
-    //const [points, setPoints] = useState(student.points)
+    const [points, setPoints] = useState(student.points)
 
     function handleClick(student) {
 
@@ -16,7 +16,7 @@ function Student({student, students}) {
         //body: JSON.stringify({ student: {points: student.points + 1}})
         body: JSON.stringify( {points: student.points + 1})
       })
-        //setPoints()
+        setPoints(points + 1)
     }
 
 
