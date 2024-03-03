@@ -4,8 +4,9 @@ function Parent({parent}) {
 
 
     return(
-        <div id="http://localhost:3006/parents">
-            <h3>{parent.name}   {parent.phone}</h3>
+        <div id="parent">
+           <h3>Parent Name: {parent.name} </h3>
+           <h4> Contact: {parent.phone}</h4>
         </div>
     )
 }

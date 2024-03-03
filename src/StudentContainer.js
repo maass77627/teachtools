@@ -1,13 +1,13 @@
 import Student from "./Student"
 
 
-function StudentContainer({students}) {
+function StudentContainer({students, deleteStudent}) {
 
     
     return(
         <div className="item2">
-            <h2>Students</h2>
-            {students.map((student) => <Student key={student.id} student={student} students={students}></Student>)}
+            <h2 id="h2">Students</h2>
+            {students.map((student) => <Student deleteStudent={deleteStudent} key={student.id} student={student} students={students}></Student>)}
         </div>
     )
 }
