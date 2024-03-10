@@ -4,6 +4,11 @@ function StudentInfo({student, deleteStudent}) {
 
     const [points, setPoints] = useState(student.points)
 
+   // function updateStudent(data) {
+     //   console.log(data.points)
+     //   setPoints(data.points)
+   // }
+
     function handleDelete(student) {
         fetch(`http://localhost:3006/students/${student.id}`, {
             method: "DELETE"
@@ -21,7 +26,8 @@ function StudentInfo({student, deleteStudent}) {
             },
             body: JSON.stringify( {points: student.points + 1})
           })
-         
+         .then((response) => response.json())
+         .then((data) => console.log(data))
           
            setPoints((points) => points + 1)
            console.log(points)
