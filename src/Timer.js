@@ -24,6 +24,7 @@ function Timer() {
     //setToggle(!toggle)
     document.querySelector('#timer').remove()
    }
+   //
 
 return (
     <div id="timer">
