@@ -1,6 +1,7 @@
 
 //import './App.css';
 import Header from "./Header";
+import Winner from "./Winner";
 import StudentContainer from "./StudentContainer";
 import ParentContainer from "./ParentContainer"
 import { useState } from "react";
@@ -58,7 +59,7 @@ function App() {
 
       <Header showForm={showForm} setShowForm={setShowForm}></Header>
       
-      {showForm ? <StudentForm></StudentForm> : null}
+      {showForm ? <StudentForm></StudentForm> : <Winner students={students}/>}
       {showForm ? <ParentForm></ParentForm> : <Timer/>}
 
       

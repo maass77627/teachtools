@@ -1,14 +1,8 @@
-//import { useState } from "react";
+
 
 function StudentInfo({student, deleteStudent, updateStudent}) {
 
-   // const [points, setPoints] = useState(student.points)
-
-    //function updateStudent(data) {
-     //   console.log(data.points)
-     //  setPoints(data.points)
-    //}
-
+   
     function handleDelete(student) {
         fetch(`http://localhost:3006/students/${student.id}`, {
             method: "DELETE"
@@ -16,23 +10,9 @@ function StudentInfo({student, deleteStudent, updateStudent}) {
         deleteStudent(student.id)
     }
 
-   // function handleClick(e) {
-    //    e.preventDefault()
-    //    console.log(student)
-     //     fetch(`http://localhost:3006/students/${student.id}`, {
-     //       method: "PATCH",
-      //      headers: {
-      //         "Content-Type": "application/json",
-      //      },
-      //      body: JSON.stringify( {points: student.points + 1})
-      //    })
-      //   .then((response) => response.json())
-      //   .then((data) => console.log(data))
+     
           
-       //  console.log(points)
-       //    setPoints((points) => points + 1)
-       //    console.log(points)
-   // }
+       
 
     
 

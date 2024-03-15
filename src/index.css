@@ -4,12 +4,21 @@
 }
 
 #timer {
-  width: 300px;
+  width: 250px;
   height: 200px;
   border-radius: 25px;
   background-color: greenyellow;
   font-size: 70px;
 }
+
+#winner {
+  width: 250px;
+  height: 200px;
+  border-radius: 25px;
+  background-color: greenyellow;
+  font-size: 70px;
+}
+
 
 #title {
   font-family: cursive;
