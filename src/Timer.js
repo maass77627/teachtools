@@ -5,7 +5,7 @@ import { useState } from "react";
 function Timer() {
 
     const [count, setCount] = useState(0)
-    const [toggle, setToggle] = useState(false)
+   // const [toggle, setToggle] = useState(false)
     
 
    // useEffect(() => {

@@ -10,22 +10,22 @@ function Student({student, deleteStudent}) {
             setToggle(!toggle)
     }
 
-    //const [points, setPoints] = useState(student.points)
+    const [points, setPoints] = useState(student.points)
 
-    //function handleClick(student) {
-    //     console.log(student)
-    //  fetch(`http://localhost:3006/students/${student.id}`, {
-     //   method: "PATCH",
-     //   headers: {
-     //       "Content-Type": "application/json",
-     //   },
-      //  body: JSON.stringify( {points: student.points + 1})
-     // })
+    function updateStudent(student) {
+         console.log(student)
+      fetch(`http://localhost:3006/students/${student.id}`, {
+       method: "PATCH",
+        headers: {
+            "Content-Type": "application/json",
+        },
+        body: JSON.stringify( {points: student.points + 1})
+      })
      
       
-     //  setPoints((points) => points + 1)
-     //  console.log(points)
-    //}
+      setPoints((points) => points + 1)
+       console.log(points)
+    }
 
 
 
@@ -33,8 +33,8 @@ function Student({student, deleteStudent}) {
         <div onClick={() => handleClick(student)} id="student">
             <h3>{student.firstName}</h3>
             <img   id="student-image" src={student.image} alt="animal"></img>
-            <h4>{student.points}</h4>
-            {toggle ? <StudentInfo deleteStudent={deleteStudent} student={student}></StudentInfo> : null}
+            <h4>{points}</h4>
+            {toggle ? <StudentInfo updateStudent={updateStudent} deleteStudent={deleteStudent} student={student}></StudentInfo> : null}
         </div>
     )
 }
