@@ -1,6 +1,6 @@
 
 function Header({showForm, setShowForm}) {
-
+    console.log("header loaded")
     function handleClick() {
         setShowForm(!showForm)
     }

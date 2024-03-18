@@ -15,6 +15,7 @@ import NoPage from "./NoPage";
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 
 function App() {
+  console.log("app loaded")
   const [showForm, setShowForm] = useState(false)
   const [students, setStudents] = useState([])
   const [parents, setParents] = useState([])
@@ -24,11 +25,13 @@ function App() {
       setStudents(updatedStudents)
   }
 
+  // use effect with [] runs on component load
   useEffect(() => {
     fetch("http://localhost:3006/students")
     .then((response) => response.json())
     .then((json) => {console.log(json)
       setStudents(json)})
+      console.log("students loaded")
   }, []) 
 
   useEffect(() => {
@@ -37,9 +40,12 @@ function App() {
     .then((json) => {
       console.log(json)
       setParents(json)
+      console.log("parents loaded fetch")
     })
   }, [])
 
+  console.log(students)
+  console.log(parents)
 
   return (
     <div className="grid-container"  >
@@ -51,6 +57,7 @@ function App() {
           <Route path="/" element={<StudentContainer deleteStudent={deleteStudent} students={students}/>}></Route>
           <Route path="/parents" element={<ParentContainer parents={parents}></ParentContainer>}></Route>
           <Route path="*" element={<NoPage>Error</NoPage>}></Route>
+
         </Routes>
         </BrowserRouter>
          
@@ -59,8 +66,8 @@ function App() {
 
       <Header showForm={showForm} setShowForm={setShowForm}></Header>
       
-      {showForm ? <StudentForm></StudentForm> : <Winner students={students}/>}
-      {showForm ? <ParentForm></ParentForm> : <Timer/>}
+      {showForm ? <StudentForm/> : <Winner students={students}/>}
+      {showForm ? <ParentForm/> : <Timer/>}
 
       
       

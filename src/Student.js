@@ -3,7 +3,7 @@ import StudentInfo from "./StudentInfo"
 
 
 function Student({student, deleteStudent}) {
-
+    console.log("student loaded")
         const [toggle, setToggle] = useState(false)
     
         function handleClick() {
