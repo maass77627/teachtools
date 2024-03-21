@@ -4,7 +4,9 @@ import StudentInfo from "./StudentInfo"
 
 function Student({student, deleteStudent}) {
     console.log("student loaded")
-        const [toggle, setToggle] = useState(false)
+       
+    
+    const [toggle, setToggle] = useState(false)
     
         function handleClick() {
             setToggle(!toggle)
@@ -12,15 +14,17 @@ function Student({student, deleteStudent}) {
 
     const [points, setPoints] = useState(student.points)
 
-    function updateStudent(student) {
+    function updateStudent() {
          console.log(student)
-      fetch(`http://localhost:3006/students/${student.id}`, {
-       method: "PATCH",
-        headers: {
+          fetch(`http://localhost:3006/students/${student.id}`, {
+           method: "PATCH",
+          headers: {
             "Content-Type": "application/json",
         },
         body: JSON.stringify( {points: student.points + 1})
       })
+      .then((response) => response.json())
+      .then((json) => console.log(json))
      
       
       setPoints((points) => points + 1)
@@ -30,7 +34,7 @@ function Student({student, deleteStudent}) {
 
 
     return(
-        <div onClick={() => handleClick(student)} id="student">
+        <div onClick={() => handleClick()} id="student">
             <h3>{student.firstName}</h3>
             <img   id="student-image" src={student.image} alt="animal"></img>
             <h4>{points}</h4>
