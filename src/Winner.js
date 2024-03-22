@@ -1,5 +1,3 @@
-//import { useEffect } from "react"
-//import { useState } from "react"
 
 
 function Winner({students}) {
@@ -10,18 +8,16 @@ function Winner({students}) {
 
 
 function findWinner() {
-  const winners = students.sort((a,b) => a.points - b.points)
-  console.log(winners)
-   let num = winners.length - 1
-    console.log(winners[num].firstName)
-   return winners[num].firstName
+      const winners = students.sort((a,b) => a.points - b.points)
+      let num = winners.length - 1
+      return winners[num].firstName
 }
 
   
     return (
         <div id="winner">
           <p>Class point leader</p>
-          <h32>{students ? findWinner() : null}</h32>
+          <p>{students ? findWinner() : null}</p>
         </div>
     )
 }

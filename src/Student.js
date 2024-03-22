@@ -13,15 +13,16 @@ function Student({student, deleteStudent}) {
     }
 
     const [points, setPoints] = useState(student.points)
+    console.log(points)
 
     function updateStudent() {
          console.log(student)
           fetch(`http://localhost:3006/students/${student.id}`, {
            method: "PATCH",
-          headers: {
+           headers: {
             "Content-Type": "application/json",
         },
-        body: JSON.stringify( {points: student.points + 1})
+        body: JSON.stringify( {points: points + 1})
       })
       .then((response) => response.json())
       .then((json) => console.log(json))

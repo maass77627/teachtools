@@ -22,8 +22,7 @@ function StudentInfo({student, deleteStudent, updateStudent}) {
             <h3>Parent: {student.parentName}</h3>
             <button onClick={() => handleDelete(student)}>delete</button>
             <button onClick={(student) => updateStudent(student)}>add points</button>
-
-        </div>
+         </div>
     )
 }
 
