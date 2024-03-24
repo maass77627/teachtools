@@ -1,32 +1,52 @@
 //
-import { useState } from "react";
+//import { useState } from "react";
+import Timer from "react-compound-timerv2-ocuco"
+import React from "react"
 
+function Timerz() {
 
-function Timer() {
-
-    const [count, setCount] = useState(0)
+   // const [count, setCount] = useState(0)
    
+   // <div id="timer">
+    //   {count} <br></br>
+     //   <button onClick={handleStart}>start</button>
+     //   <button onClick={handleStop}>stop</button>
 
-   function handleStart() {
-    setInterval(() => setCount((count) => count + 1), 1000)
+ //  function handleStart() {
+  //  setInterval(() => setCount((count) => count + 1), 1000)
    
-}
+//}
 
-   function handleStop() {
-    clearInterval(setCount(0))
-    document.querySelector('#timer').remove()
-   }
+  // function handleStop() {
+  //  clearInterval(setCount(0))
+  //  document.querySelector('#timer').remove()
+  // }
    
 
 return (
     <div id="timer">
-       {count} <br></br>
-        <button onClick={handleStart}>start</button>
-        <button onClick={handleStop}>stop</button>
-    </div>
 
+    <Timer initialTime={55000} startImmediately={false}>
+  {({ start, resume, pause, stop, reset, timerState }) => (
+    <>
+      <div>
+        <Timer.Seconds /> seconds
+      </div>
+      
+      
+      <div>
+        <button onClick={start}>Start</button>
+        <button onClick={pause}>Pause</button>
+        <button onClick={resume}>Resume</button>
+        <button onClick={stop}>Stop</button>
+        <button onClick={reset}>Reset</button>
+      </div>
+    </>
+  )}
+</Timer>
+</div>
 )
 
 }
 
-export default Timer
+export default Timerz

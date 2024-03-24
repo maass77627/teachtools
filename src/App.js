@@ -8,7 +8,7 @@ import { useState } from "react";
 import { useEffect } from "react";
 import StudentForm from "./StudentForm";
 import ParentForm from "./ParentForm";
-import Timer from "./Timer";
+import Timerz from "./Timer";
 import NoPage from "./NoPage";
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 
@@ -58,7 +58,7 @@ function App() {
     <Header showForm={showForm} setShowForm={setShowForm}></Header>
       {appLoaded ? <Winner students={students}/> : null}
       {showForm ? <StudentForm/> : null}
-      {showForm ? <ParentForm/> : <Timer/>}
+      {showForm ? <ParentForm/> : <Timerz/>}
 
       
       
