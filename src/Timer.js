@@ -22,11 +22,11 @@ function Timerz() {
   //  document.querySelector('#timer').remove()
   // }
    
-
+//<button onClick={pause}>Pause</button>
 return (
     <div id="timer">
 
-    <Timer initialTime={55000} startImmediately={false}>
+    <Timer initialTime={0} startImmediately={false}>
   {({ start, resume, pause, stop, reset, timerState }) => (
     <>
       <div>
@@ -36,7 +36,6 @@ return (
       
       <div>
         <button onClick={start}>Start</button>
-        <button onClick={pause}>Pause</button>
         <button onClick={resume}>Resume</button>
         <button onClick={stop}>Stop</button>
         <button onClick={reset}>Reset</button>
