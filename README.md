@@ -2,7 +2,7 @@
 
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
-backend = json-server-template
+backend = json-server-template run npm-run-dev to start
 
 ## Available Scripts
 
