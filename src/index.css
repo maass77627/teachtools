@@ -11,18 +11,22 @@ p {
 }
 
 #timer {
+  border-style: dotted;
   width: 250px;
   height: 200px;
   border-radius: 25px;
-  background-color: greenyellow;
+  background-color: rgb(4, 116, 101);
+  /* background-color: rgb(145, 151, 134); */
   font-size: 70px;
 }
 
 #winner {
+  text-decoration-line: underline;
+  border-style: dotted;
   width: 250px;
   height: 200px;
   border-radius: 25px;
-  background-color: greenyellow;
+  background-color: rgb(4, 116, 101);
   font-size: 70px;
 }
 
@@ -66,6 +70,8 @@ p {
   grid-gap: 5px;
   text-align: center;
   font-size: 20;
+  background-image: url("https://th.bing.com/th/id/OIP.Zqou4TJevh_KPSTg_Vv8DAHaHa?rs=1&pid=ImgDetMain");
+  /* background-image: url("https://th.bing.com/th/id/OIP.6PZixlrpUcRMS9QiXzFG8wHaE8?w=228&h=180&c=7&r=0&o=5&pid=1.7"); */
   background-color: rgb(72, 163, 119);
   border-style: dotted;
   border-color: bisque;
@@ -76,7 +82,7 @@ p {
   grid-area: header;
   background-color: darkslategrey; 
   background-image: url("/home/kellymaass/MyReact/forecast/public/ruler2.png");
-  height: 250px;
+  height: 200px;
   width: 1300px;
   border-radius: 25px;
   
@@ -86,8 +92,10 @@ p {
   grid-area: main; 
   border-style: dotted;
   border-color: bisque;
-  background-color: rgb(189, 137, 184);
-  height: 400px;
+  /* background-image: url("https://th.bing.com/th/id/OIP.Zqou4TJevh_KPSTg_Vv8DAHaHa?rs=1&pid=ImgDetMain"); */
+  /* background-color: rgb(189, 137, 184); */
+  background-color: rgb(192, 163, 0);
+  height: 360px;
   width: 700px;
   border-radius: 25px;
 }
@@ -116,6 +124,8 @@ p {
 
 
 #student {
+  background-color: rgb(219, 153, 9);
+  border-radius: 25px;
   float: left;
   padding: 5px;
   border-style: dotted;
@@ -140,6 +150,7 @@ p {
 }
 
 #form {
+  position: hover;
   font-family: cursive;
   height: 300px;
   width: 200px;

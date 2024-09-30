@@ -50,7 +50,7 @@ function App() {
      <BrowserRouter>
       <Routes>
       <Route path="/" element={<StudentContainer deleteStudent={deleteStudent} students={students}/>}></Route>
-      <Route path="/parents" element={<ParentContainer parents={parents}></ParentContainer>}></Route>
+      <Route path="/parents" element={<ParentContainer  students={students} parents={parents}></ParentContainer>}></Route>
       <Route path="*" element={<NoPage>Error</NoPage>}></Route>
       </Routes>
     </BrowserRouter>
