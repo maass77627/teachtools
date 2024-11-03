@@ -1,5 +1,5 @@
 
-//import './App.css';
+
 import Header from "./Header";
 import Winner from "./Winner";
 import StudentContainer from "./StudentContainer";
@@ -21,6 +21,9 @@ function App() {
   const [students, setStudents] = useState()
   const [parents, setParents] = useState([])
 
+
+
+
   useEffect(() => {
     fetch("http://localhost:3006/students")
     .then((response) => response.json())
@@ -29,6 +32,8 @@ function App() {
       setAppLoaded(true)
       console.log("students useeffect loaded")
   }, []) 
+
+
 
   useEffect(() => {
     fetch("http://localhost:3006/parents")
@@ -40,13 +45,18 @@ function App() {
     })
   }, [])
 
+
+
   function deleteStudent(id) {
     const updatedStudents = students.filter(student => student.id !== id)
     setStudents(updatedStudents)
   }
 
+
   return (
     <div className="grid-container">
+
+
      <BrowserRouter>
       <Routes>
       <Route path="/" element={<StudentContainer deleteStudent={deleteStudent} students={students}/>}></Route>
@@ -56,6 +66,8 @@ function App() {
     </BrowserRouter>
          
     <Header showForm={showForm} setShowForm={setShowForm}></Header>
+
+    
       {appLoaded ? <Winner students={students}/> : null}
       {showForm ? <StudentForm/> : null}
       {showForm ? <ParentForm/> : <Timerz/>}

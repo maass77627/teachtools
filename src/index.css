@@ -16,7 +16,7 @@ p {
   height: 200px;
   border-radius: 25px;
   background-color: rgb(4, 116, 101);
-  /* background-color: rgb(145, 151, 134); */
+  
   font-size: 70px;
 }
 
@@ -71,7 +71,7 @@ p {
   text-align: center;
   font-size: 20;
   background-image: url("https://th.bing.com/th/id/OIP.Zqou4TJevh_KPSTg_Vv8DAHaHa?rs=1&pid=ImgDetMain");
-  /* background-image: url("https://th.bing.com/th/id/OIP.6PZixlrpUcRMS9QiXzFG8wHaE8?w=228&h=180&c=7&r=0&o=5&pid=1.7"); */
+ 
   background-color: rgb(72, 163, 119);
   border-style: dotted;
   border-color: bisque;
@@ -92,8 +92,7 @@ p {
   grid-area: main; 
   border-style: dotted;
   border-color: bisque;
-  /* background-image: url("https://th.bing.com/th/id/OIP.Zqou4TJevh_KPSTg_Vv8DAHaHa?rs=1&pid=ImgDetMain"); */
-  /* background-color: rgb(189, 137, 184); */
+ 
   background-color: rgb(192, 163, 0);
   height: 360px;
   width: 700px;

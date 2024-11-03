@@ -3,7 +3,7 @@ import StudentInfo from "./StudentInfo"
 
 
 function Student({student, deleteStudent}) {
-    console.log("student loaded")
+    
        
     
     const [toggle, setToggle] = useState(false)
@@ -13,10 +13,10 @@ function Student({student, deleteStudent}) {
     }
 
     const [points, setPoints] = useState(student.points)
-    console.log(points)
+    
 
     function updateStudent() {
-         console.log(student)
+         
           fetch(`http://localhost:3006/students/${student.id}`, {
            method: "PATCH",
            headers: {
@@ -29,12 +29,13 @@ function Student({student, deleteStudent}) {
      
       
       setPoints((points) => points + 1)
-       console.log(points)
+      
     }
 
 
 
     return(
+        
         <div onClick={() => handleClick()} id="student">
             <h3>{student.firstName}</h3>
             <img   id="student-image" src={student.image} alt="animal"></img>

@@ -1,7 +1,7 @@
-//  import { useState } from "react";
+
 
 function Parent({parent, students}) {
-    console.log(students)
+    
 
     
     function studentName() {
