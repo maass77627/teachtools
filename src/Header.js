@@ -10,8 +10,11 @@ function Header({showForm, setShowForm}) {
 
     return (
         <div className="item1">
+            {/* <img id="logo" src="teachlogo.png" alt="logo"></img> */}
             <img id="books" src="books.png" alt="books"></img>
             <h1 id="title">Teach Tools</h1>
+
+            
             
             <a  href="http://localhost:3001/parents">Parents</a><br></br>
             <a  href="http://localhost:3001/">Students</a><br></br>

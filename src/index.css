@@ -3,7 +3,11 @@ p {
 }
 
 
-
+#logo {
+  float: left;
+  height: 250px;
+  width: 250px;
+}
 
 #h2 {
   text-decoration-line: underline;
@@ -101,7 +105,7 @@ p {
 .item3 { 
   border-style: dotted;
   border-color: bisque;
-  position: fixed;
+  position: relative;
   grid-area: menu; 
   height: 155px;
   width: 300px;
