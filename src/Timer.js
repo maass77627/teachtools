@@ -16,11 +16,11 @@ return (
       </div>
       
       
-      <div>
-        <button onClick={start}>Start</button>
-        <button onClick={resume}>Resume</button>
-        <button onClick={stop}>Stop</button>
-        <button onClick={reset}>Reset</button>
+      <div className="btn-group">
+        <button className="btn btn-dark btn-sm" onClick={start}>Start</button>
+        <button className="btn btn-dark btn-sm" onClick={resume}>Resume</button>
+        <button className="btn btn-dark btn-sm" onClick={stop}>Stop</button>
+        <button className="btn btn-dark btn-sm" onClick={reset}>Reset</button>
       </div>
     </>
   )}

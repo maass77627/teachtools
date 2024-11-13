@@ -137,6 +137,7 @@ p {
 }
 
 #parent {
+  margin: auto;
   height: 100px;
   width: 400px;
   border: 2px;
@@ -156,7 +157,7 @@ p {
   position: hover;
   font-family: cursive;
   height: 300px;
-  width: 200px;
+  width: 300px;
   border-radius: 25px;
   background-color: greenyellow;
   border-style: dotted;
@@ -164,7 +165,9 @@ p {
 }
 
 #books {
+ 
   float: left;
   height: 100px;
   width: 100px;
+   border-radius: 25px; 
 }

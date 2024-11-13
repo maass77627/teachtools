@@ -1,4 +1,5 @@
 import { useState } from "react"
+import React from "react"
 
 function StudentForm() {
 
@@ -60,12 +61,12 @@ function StudentForm() {
             <form onSubmit={handleSubmit}>
                 <h3>Add Student</h3>
                 <label>first name</label>
-                <input onChange={handleFirstChange} type="text" name="firstname" value={formData.firstName}></input>
-                <label>last name</label>
-                <input onChange={handleLastChange} type="text" name="lastname" value={formData.lastName}></input>
-                <label>image</label>
+                <input onChange={handleFirstChange} type="text" name="firstname" value={formData.firstName}></input><br></br>
+                <label>last name</label><br></br>
+                <input onChange={handleLastChange} type="text" name="lastname" value={formData.lastName}></input><br></br>
+                <label>image</label><br></br>
                 <input onChange={handleImageChange} type="text" name="image" value={formData.image}></input><br></br>
-                <label>points</label>
+                <label>points</label><br></br>
                 <input onChange={handlePointsChange} type="text" name="points" value={formData.points}></input><br></br>
                 <button>Submit</button>
             </form>

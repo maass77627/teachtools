@@ -1,6 +1,6 @@
 import { useState } from "react"
 import StudentInfo from "./StudentInfo"
-
+import React from "react"
 
 function Student({student, deleteStudent}) {
     

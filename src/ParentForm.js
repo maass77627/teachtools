@@ -1,4 +1,5 @@
 import { useState } from "react"
+import React from "react"
 
 function ParentForm() {
 
@@ -41,9 +42,9 @@ function ParentForm() {
         <div id="form">
             <form onSubmit={handleSubmit}>
                 <h3>Add Parent</h3>
-                <label>name</label>
+                <label>name</label><br></br>
                 <input onChange={handleNameChange} type="text" name="firstname" value={formData.firstName}></input>
-                <label>phone number</label>
+                <label>phone number</label><br></br>
                 <input onChange={handleNumChange} type="text" name="lastname" value={formData.lastName}></input>
     
                 <button>Submit</button>

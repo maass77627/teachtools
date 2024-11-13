@@ -1,5 +1,5 @@
 import Parent from "./Parent"
-
+import React from "react"
 
 function ParentContainer({parents, students}) {
     console.log(students)
