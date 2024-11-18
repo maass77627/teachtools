@@ -8,6 +8,38 @@ p {
 
 }
 
+#students {
+  text-align: center;
+  position: fixed;
+  margin-top: 200px;
+  margin-left: 300px;
+  font-family: cursive;
+  border-style: dotted;
+  border-color: bisque;
+ 
+  background-color: rgb(192, 163, 0);
+  height: 360px;
+  width: 700px;
+  border-radius: 25px;
+}
+
+#links{
+  position: fixed;
+  margin-left: 550px;
+  margin-top: 100px;
+  text-align: center;
+  
+}
+
+.header {
+  position: fixed;
+  background-image: url("/home/kellymaass/MyReact/forecast/public/ruler2.png");
+  height: 200px;
+  width: 1300px;
+  border-radius: 25px;
+
+}
+
 #logo {
   position: fixed;
   margin-left: 50px;
@@ -21,7 +53,10 @@ p {
 }
 
 #timer {
-  margin-right: 10px;
+  position: fixed;
+  text-align: center;
+  margin-top: 220px;
+  margin-left: 1010px; 
   border-style: dotted;
   width: 275px;
   height: 220px;
@@ -31,6 +66,9 @@ p {
 }
 
 #winner {
+  text-align: center;
+  position: fixed;
+  margin-top: 220px;
   margin-left: 10px;
   text-decoration-line: underline;
   border-style: dotted;
@@ -43,6 +81,9 @@ p {
 
 
 #title {
+  position: fixed;
+  margin-left: 100px;
+  margin-top: 100px;
   font-family: cursive;
   font-style: Helvetica;
   text-align: center;
@@ -61,13 +102,13 @@ p {
   
 } */
 
-#info {
+/* #info {
   height: 150px;
   width: 300px;
   border-radius: 25px;
   background-color: blue;
   float: right;
-}
+} */
 
 
 /* .grid-container {
@@ -176,8 +217,21 @@ p {
 }
 
 #books {
-   float: left;
+   position: fixed;
+   margin-left: 50px;
+   margin-top: 60px;
    height: 100px;
    width: 100px;
    border-radius: 25px; 
+   z-index: 1;
+}
+
+.options {
+  position: ;
+  height: 150px;
+  width: 300px;
+  border-radius: 25px;
+  background-color: rgb(157, 157, 168);
+  z-index: 10;
+
 }

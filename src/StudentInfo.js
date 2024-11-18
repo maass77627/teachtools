@@ -17,7 +17,7 @@ function StudentInfo({student, deleteStudent, updateStudent}) {
     
 
     return(
-        <div className="item3">
+        <div className="options">
             <h1>{student.firstName}</h1>
             <h3>Parent: {student.parentName}</h3>
             <button onClick={() => handleDelete(student)}>delete</button>
