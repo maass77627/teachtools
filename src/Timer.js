@@ -9,7 +9,7 @@ return (
     <div id="timer">
 
     <Timer initialTime={0} startImmediately={false}>
-  {({ start, resume, pause, stop, reset, timerState }) => (
+  {({ start, resume, stop, reset}) => (
     <>
       <div>
         <Timer.Seconds /> seconds

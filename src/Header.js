@@ -1,6 +1,6 @@
 
 function Header({showForm, setShowForm}) {
-    console.log("header loaded")
+    // console.log("header loaded")
     function handleClick() {
         setShowForm(!showForm)
     }
@@ -9,7 +9,7 @@ function Header({showForm, setShowForm}) {
 
 
     return (
-        <div className="item1">
+        <div className="item1" id="logo">
             {/* <img id="logo" src="teachlogo.png" alt="logo"></img> */}
             <img id="books" src="books.png" alt="books"></img>
             <h1 id="title">Teach Tools</h1>

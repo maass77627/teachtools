@@ -1,5 +1,5 @@
 import Student from "./Student"
-
+import React from "react";
 
 function StudentContainer({students, deleteStudent}) {
 

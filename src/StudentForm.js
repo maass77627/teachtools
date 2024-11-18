@@ -1,7 +1,7 @@
 import { useState } from "react"
 import React from "react"
 
-function StudentForm() {
+function StudentForm({addStudent}) {
 
     const [formData, setFormData] = useState({
         firstName:"Suzy",
@@ -11,7 +11,7 @@ function StudentForm() {
        })
 
        function handleFirstChange(e) {
-        console.log(e.target.value)
+        // console.log(e.target.value)
         setFormData({
             ...formData, 
             firstName: e.target.value
@@ -19,7 +19,7 @@ function StudentForm() {
        }
 
        function handleLastChange(e) {
-        console.log(e.target.value)
+        // console.log(e.target.value)
         setFormData({
             ...formData, 
             lastName: e.target.value
@@ -27,7 +27,7 @@ function StudentForm() {
        }
 
        function handleImageChange(e) {
-        console.log(e.target.value)
+        // console.log(e.target.value)
         setFormData({
             ...formData, 
             image: e.target.value
@@ -35,7 +35,7 @@ function StudentForm() {
        }
 
        function handlePointsChange(e) {
-        console.log(e.target.value)
+        // console.log(e.target.value)
         setFormData({
             ...formData, 
             points: e.target.value
@@ -44,7 +44,7 @@ function StudentForm() {
 
        function handleSubmit(e) {
         e.preventDefault()
-            console.log(formData)
+            // console.log(formData)
             fetch("http://localhost:3006/students", {
                 method: "POST",
                 headers: {
@@ -52,6 +52,7 @@ function StudentForm() {
                 }, 
                 body: JSON.stringify(formData)
               })
+              addStudent(formData)
        }
 
 

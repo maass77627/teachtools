@@ -14,7 +14,7 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom';
 
 function App() {
 
-  console.log("app loaded")
+  // console.log("app loaded")
 
   const [appLoaded, setAppLoaded] = useState(false)
   const [showForm, setShowForm] = useState(false)
@@ -27,10 +27,10 @@ function App() {
   useEffect(() => {
     fetch("http://localhost:3006/students")
     .then((response) => response.json())
-    .then((json) => {console.log(json)
+    .then((json) => {
       setStudents(json)})
       setAppLoaded(true)
-      console.log("students useeffect loaded")
+      // console.log("students useeffect loaded")
   }, []) 
 
 
@@ -39,13 +39,17 @@ function App() {
     fetch("http://localhost:3006/parents")
     .then((response) => response.json())
     .then((json) => {
-      console.log(json)
+      // console.log(json)
       setParents(json)
-      console.log("parents useeffect loaded")
+      // console.log("parents useeffect loaded")
     })
-  }, [])
+  }, [parents])
 
-
+function addStudent(student) {
+  // console.log(student)
+ const updatedStudents = students.push(student)
+      setStudents(updatedStudents)
+ }
 
   function deleteStudent(id) {
     const updatedStudents = students.filter(student => student.id !== id)
@@ -54,8 +58,8 @@ function App() {
 
 
   return (
-    <div className="grid-container">
-
+    // <div className="grid-container">
+    <div id="body">
 
      <BrowserRouter>
       <Routes>
@@ -69,7 +73,7 @@ function App() {
 
     
       {appLoaded ? <Winner students={students}/> : null}
-      {showForm ? <StudentForm/> : null}
+      {showForm ? <StudentForm addStudent={addStudent}/> : null}
       {showForm ? <ParentForm/> : <Timerz/>}
 
       

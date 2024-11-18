@@ -9,7 +9,7 @@ function ParentForm() {
        })
 
        function handleNameChange(e) {
-        console.log(e.target.value)
+        // console.log(e.target.value)
         setFormData({
             ...formData, 
             name: e.target.value
@@ -17,7 +17,7 @@ function ParentForm() {
        }
 
        function handleNumChange(e) {
-        console.log(e.target.value)
+        // console.log(e.target.value)
         setFormData({
             ...formData, 
             phone: e.target.value
@@ -26,7 +26,7 @@ function ParentForm() {
 
        function handleSubmit(e) {
         e.preventDefault()
-            console.log(formData)
+            // console.log(formData)
             fetch("http://localhost:3006/parents", {
                 method: "POST",
                 headers: {

@@ -2,7 +2,7 @@ import Parent from "./Parent"
 import React from "react"
 
 function ParentContainer({parents, students}) {
-    console.log(students)
+    // console.log(students)
 
     return(
         <div className="item4">

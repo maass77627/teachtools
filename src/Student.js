@@ -37,7 +37,7 @@ function Student({student, deleteStudent}) {
     return(
         
         <div onClick={() => handleClick()} id="student">
-            <h3>{student.firstName}</h3>
+            <h3>{student.firstName.charAt(0).toUpperCase() + student.firstName.slice(1)}</h3>
             <img   id="student-image" src={student.image} alt="animal"></img>
             <h4>{points}</h4>
             {toggle ? <StudentInfo updateStudent={updateStudent} deleteStudent={deleteStudent} student={student}></StudentInfo> : null}

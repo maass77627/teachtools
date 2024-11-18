@@ -1,8 +1,8 @@
-
+import React from "react"
 
 function Winner({students}) {
 
-  console.log("winner loaded")
+  // console.log("winner loaded")
 
 
 
