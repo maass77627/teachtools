@@ -152,7 +152,7 @@ p {
   width: 700px;
   border-radius: 25px;
 }
-.item3 { 
+/* .item3 { 
   border-style: dotted;
   border-color: bisque;
   position: relative;
@@ -172,7 +172,7 @@ p {
   border-radius: 25px;
   border-style: dotted;
   border-color: bisque;
-} */
+} */ 
 /* .item5 { grid-area: footer; } */
 
 
@@ -187,6 +187,21 @@ p {
   height: 160px;
   width: 80px;
 }
+
+
+#parents{
+margin: auto;
+font-family: cursive;
+
+border-style: dotted;
+border-color: bisque;
+
+background-color: rgb(67, 185, 112);
+height: 360px;
+width: 700px;
+border-radius: 25px;
+}
+
 
 #parent {
   margin: auto;
@@ -227,7 +242,7 @@ p {
 }
 
 .options {
-  position: ;
+  /* position: ; */
   height: 150px;
   width: 300px;
   border-radius: 25px;
